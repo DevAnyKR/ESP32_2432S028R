@@ -6,10 +6,6 @@
  This sketch uses the GLCD font only.
 
  */
-
-#include "lv_conf.h"
-#define LGFX_AUTODETECT
-
 #include <LGFX_TFT_eSPI.hpp>
 // #include <TFT_eSPI.h>
 

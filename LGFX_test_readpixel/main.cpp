@@ -1,7 +1,4 @@
 
-#include "lv_conf.h"
-#define LGFX_AUTODETECT
-
 #include <stdio.h>
 
 #include <LovyanGFX.hpp>

@@ -1,6 +1,3 @@
-#include "lv_conf.h"
-#define LGFX_AUTODETECT
-
 #if __has_include(<SPIFFS.h>)
 #include <SPIFFS.h>
 #endif
