@@ -22,7 +22,7 @@ just USD$8.xx
 - Display: 240x320 ILI9341
 - Touch: XPT2046
 
-# LVGL, LovyanGFX 라이브러리 예제 사용 방법
+# LVGL, LovyanGFX 라이브러리 사용 방법
 ## 새 프로젝트일 때
 platformio.ini 파일을 열고
 `src_dir =` 줄을 모두 주석으로 변경하거나 삭제합니다.
@@ -36,12 +36,14 @@ platformio.ini 파일을 열고
 #include "lv_conf.h"
 ```
 
-## 예제를 업로드할 때
-platformio.ini 파일을 열고 `[platformio]` 섹션의 `src_dir =` 항목에 각 예제 폴더명을 지정합니다.
+## LovyanGFX 예제 사용 방법
+1. `.pio\libdeps\{PIO.`환경이름`}\LovyanGFX\examples` 예제 폴더를 프로젝트 루트에 복사합니다.
+2. `platformio.ini` 파일을 열고 `[platformio]` 섹션의 `src_dir =` 항목에 예제 폴더명을 지정합니다.
+
 예)
 ```py
 [platformio]
-src_dir = LGFX_TFT_graphicstest_PDQ
+src_dir = LVGL_DEMO
 ```
 
 ## Main Libraries
