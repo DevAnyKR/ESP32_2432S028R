@@ -30,9 +30,12 @@ main.cpp 파일 첫줄에 다음 코드를 삽입합니다.
 ```
 
 ## 예제를 업로드할 때
-platformio.ini 파일을 열고
-```src_dir =``` 항목에 각 예제 폴더명을 지정합니다.
-예) ```src_dir = LGFX_TFT_graphicstest_PDQ```
+platformio.ini 파일을 열고 platformio 섹션의 ```src_dir =``` 항목에 각 예제 폴더명을 지정합니다.
+예)
+```py
+[platformio]
+src_dir = LGFX_TFT_graphicstest_PDQ
+```
 
 ## Main Libraries
 - TFT_eSPI
