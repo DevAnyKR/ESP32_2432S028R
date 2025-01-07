@@ -9,7 +9,10 @@ PlatformIO IDE에서 사용할 수 있도록 재구성하였습니다.
 
 ### 보드 구입하기
 
-[AliExpress Store](https://s.click.aliexpress.com/e/_oEkDPab)
+- [AliExpress Store 1](https://s.click.aliexpress.com/e/_oEkDPab)
+- [AliExpress Store 2](https://s.click.aliexpress.com/e/_oB5bPtp)
+- [AliExpress Store 3](https://s.click.aliexpress.com/e/_oEWKFFl)
+
 
 ![image](https://github.com/user-attachments/assets/0a4fbbd2-c4fa-48ef-bc53-e8ed9a881e4e)
 
