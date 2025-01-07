@@ -15,11 +15,23 @@ PlatformIO IDE에서 사용할 수 있도록 재구성하였습니다.
 
 just USD$8.xx
 
-## 사용 방법
+- USB: micro 5Pin
+- Display: 240x320 ILI9341
+- Touch: XPT2046
 
+# LVGL, LovyanGFX 라이브러리 예제 사용 방법
+## 새 프로젝트일 때
+platformio.ini 파일을 열고
+```src_dir =``` 줄을 삭제합니다.
+main.cpp 파일 첫줄에 다음 코드를 삽입합니다.
+```cpp
+#include "lv_conf.h"
+#define LGFX_AUTODETECT
+```
+
+## 예제를 업로드할 때
 platformio.ini 파일을 열고
 ```src_dir =``` 항목에 각 예제 폴더명을 지정합니다.
-
 예) ```src_dir = LGFX_TFT_graphicstest_PDQ```
 
 ## Main Libraries
