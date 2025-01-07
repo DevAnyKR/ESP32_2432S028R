@@ -22,19 +22,19 @@ just USD$8.xx
 # LVGL, LovyanGFX 라이브러리 예제 사용 방법
 ## 새 프로젝트일 때
 platformio.ini 파일을 열고
-```src_dir =``` 줄을 삭제합니다.
+`src_dir =` 줄을 모두 주석으로 변경하거나 삭제합니다.
 
-.\include\lv_conf.h 파일을 .pio\libdeps\{PIO.환경이름}\lvgl 위치에 붙여넣으세요. 라이브러리를 설치할 때마다 붙여넣어야 합니다.
+`.\include\lv_conf.h` 파일을 `.pio\libdeps\{PIO.`환경이름`}\lvgl` 위치에 붙여넣으세요. 라이브러리를 설치할 때마다 붙여넣어야 합니다.
 
-.\src\ 위치에서 프로젝트 코드 작성을 시작하세요.
+`.\src\` 위치에서 프로젝트 코드 작성을 시작하세요.
 
-※ 프로젝트별로 LVGL 설정을 추가하려면 .\src\main.cpp 파일 상단에 다음 코드를 삽입합니다.
+※ 프로젝트별로 LVGL 설정을 추가하려면 `.\src\main.cpp` 파일 상단에 다음 코드를 삽입합니다.
 ```cpp
 #include "lv_conf.h"
 ```
 
 ## 예제를 업로드할 때
-platformio.ini 파일을 열고 platformio 섹션의 ```src_dir =``` 항목에 각 예제 폴더명을 지정합니다.
+platformio.ini 파일을 열고 `[platformio]` 섹션의 `src_dir =` 항목에 각 예제 폴더명을 지정합니다.
 예)
 ```py
 [platformio]
