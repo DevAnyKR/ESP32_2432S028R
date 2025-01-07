@@ -37,7 +37,7 @@ platformio.ini 파일을 열고
 ```
 
 ## LovyanGFX 예제 사용 방법
-1. `.pio\libdeps\{PIO.`환경이름`}\LovyanGFX\examples` 예제 폴더를 프로젝트 루트에 복사합니다.
+1. `.pio\libdeps\{PIO.`환경이름`}\LovyanGFX\examples`에서 필요한 예제 폴더를 프로젝트 루트에 복사합니다. 복사한 폴더에 `.ino` 파일이 있으면 됩니다.
 2. `platformio.ini` 파일을 열고 `[platformio]` 섹션의 `src_dir =` 항목에 예제 폴더명을 지정합니다.
 
 예)
