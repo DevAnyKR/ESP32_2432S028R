@@ -126,12 +126,13 @@ void setup() {
   // lv_example_bar_4();
   // lv_example_bar_5();
   // lv_example_bar_6();
-  // lv_example_btn_1();
-  // lv_example_btn_2();
-  // lv_example_btn_3();
-  // lv_example_btnmatrix_1();
-  // lv_example_btnmatrix_2();
-  // lv_example_btnmatrix_3();
+  // lv_example_bar_7();
+  // lv_example_button_1();
+  // lv_example_button_2();
+  // lv_example_button_3();
+  // lv_example_buttonmatrix_1();
+  // lv_example_buttonmatrix_2();
+  // lv_example_buttonmatrix_3();
   // lv_example_calendar_1();
   // lv_example_chart_1();
   // lv_example_chart_2();
@@ -141,7 +142,6 @@ void setup() {
   // lv_example_chart_6();
   // lv_example_chart_7();
   // lv_example_chart_8();
-  // lv_example_chart_9();
   // lv_example_checkbox_1();
   // lv_example_checkbox_2();
   // lv_example_dropdown_1();
@@ -178,9 +178,11 @@ void setup() {
   // lv_example_win_1();
 
   // Or try out the large standard widgets demo
-  lv_demo_widgets();
+  // lv_demo_widgets();
   // lv_demo_benchmark();
   // lv_demo_keypad_encoder();
+  // lv_demo_music();
+  lv_demo_stress();
 
   // Done
   Serial.println("Setup done");
@@ -188,7 +190,7 @@ void setup() {
 
 void loop() {
   lv_tick_inc(millis() - lastTick); // Update the tick timer. Tick is new for LVGL 9
-  lastTick = millis();
-  lv_timer_handler(); // Update the UI
-  delay(5);
+  lastTick                = millis();
+  uint32_t time_till_next = lv_timer_handler(); // Update the UI
+  delay(time_till_next);
 }

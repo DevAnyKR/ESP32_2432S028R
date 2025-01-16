@@ -1,6 +1,4 @@
-#include <lvgl.h>
-#include <TFT_eSPI.h>
-#include <XPT2046_Touchscreen.h>
+#include "includes.h"
 
 SPIClass            touchscreenSpi = SPIClass(VSPI);
 XPT2046_Touchscreen touchscreen(XPT2046_CS, XPT2046_IRQ);
@@ -42,6 +40,8 @@ uint8_t    *draw_buf;     // draw_buf is allocated on heap otherwise the static 
 uint32_t    lastTick = 0; // Used to track the tick timer
 
 void        setup() {
+  Serial.begin(115200);
+
   // Initialise the touchscreen
   touchscreenSpi.begin(XPT2046_CLK, XPT2046_MISO, XPT2046_MOSI, XPT2046_CS); /* Start second SPI bus for touchscreen */
   touchscreen.begin(touchscreenSpi);                                         /* Touchscreen init */
@@ -58,11 +58,33 @@ void        setup() {
   indev = lv_indev_create();
   lv_indev_set_type(indev, LV_INDEV_TYPE_POINTER);
   lv_indev_set_read_cb(indev, my_touchpad_read);
+
+  ui_init();
+
+  // RTC Update
+  setTime(cvt_date(__DATE__, __TIME__));
+
+  // LED
+  pinMode(4, OUTPUT);
 }
 
 void loop() {
+  // LVGL
+  lv_label_set_text_fmt(objects.ui_local_time_value, "%04i/%02d/%02d,%02d:%02d:%02d;", year(), month(), day(), hour(), minute(), second());
+  lv_arc_set_value(objects.arc_hour, hour() % 12);
+  lv_arc_set_value(objects.arc_min, minute());
+  lv_arc_set_value(objects.arc_sec, second());
+
+  if (&timerTick_500ms.flag) {
+    digitalWrite(4, LOW);
+  } else {
+    digitalWrite(4, HIGH);
+  }
+
   lv_tick_inc(millis() - lastTick); // Update the tick timer. Tick is new for LVGL 9
-  lastTick                = millis();
-  uint32_t time_till_next = lv_timer_handler(); // Update the UI
-  delay(time_till_next);
+  lastTick = millis();
+
+  ui_tick();
+  // Update the UI
+  delay(lv_timer_handler());
 }
