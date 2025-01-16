@@ -46,6 +46,7 @@ src_dir = LVGL_DEMO
 - [LVGL](https://github.com/lvgl/lvgl)
 - [LovyanGFX](https://github.com/lovyan03/LovyanGFX)
 - XPT2046_Touchscreen
+- [eez-framework](https://github.com/eez-open/eez-framework)
 
 ## References
 - https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display
