@@ -42,10 +42,10 @@ src_dir = LVGL_DEMO
 ```
 
 ## Main Libraries
-- TFT_eSPI
-- [LVGL](https://github.com/lvgl/lvgl)
-- [LovyanGFX](https://github.com/lovyan03/LovyanGFX)
-- XPT2046_Touchscreen
+- [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI)@^2.5
+- [LVGL](https://github.com/lvgl/lvgl)@^9.2
+- [LovyanGFX](https://github.com/lovyan03/LovyanGFX)@^1.2
+- [XPT2046_Touchscreen](https://github.com/PaulStoffregen/XPT2046_Touchscreen)@^1.4
 - [eez-framework](https://github.com/eez-open/eez-framework)
 
 ## References
