@@ -41,15 +41,12 @@ LVGL 설정을 변경하려면 `.\include\lv_conf.h` 파일을 편집하세요.
 src_dir = LVGL_DEMO
 ```
 
-## Main Libraries
+## References
 - [TFT_eSPI](https://github.com/Bodmer/TFT_eSPI)@^2.5
 - [LVGL](https://github.com/lvgl/lvgl)@^9.2
 - [LovyanGFX](https://github.com/lovyan03/LovyanGFX)@^1.2
 - [XPT2046_Touchscreen](https://github.com/PaulStoffregen/XPT2046_Touchscreen)@^1.4
 - [eez-framework](https://github.com/eez-open/eez-framework)
-
-## References
-- https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display
 
 ## License
 MIT
